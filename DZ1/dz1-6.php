@@ -17,9 +17,9 @@ for ($i = 1; $i <= 10; $i++)
             echo "[$result]";
         }
         else
-            {
-                echo "$result";
-            }
+        {
+            echo "$result";
+        }
         echo '</td>';
     }
     echo '</tr>';
