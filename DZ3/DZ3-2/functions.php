@@ -1,4 +1,4 @@
 <?php
-include 'config.php';
-include 'class.db.php';
-include 'functions.php';
+include_once 'config.php';
+include_once 'class.db.php';
+include_once 'functions.php';

@@ -5,16 +5,16 @@ public function getUserByEmail(string $email)
 {
     $db = Db::getInstance();
     $query = "SELECT * FROM users WHERE email = :email";
-    return $db->fetchOne($query, __METHOD__[':email' => $email]);
+    return $db->fetchOne($query, __METHOD__,[':email' => $email]);
 }
 
     public function createUser(string $email, string $name)
     {
         $db = Db::getInstance();
-        $query ="INSERT INTO users(email, 'name') VALUES (:email, :name)";
+        $query ="INSERT INTO `db`.`users` (`email`, `name`) VALUES (:email, :name)";
         $result = $db->exec($query,__METHOD__,
             [
-                ':email' => $email,
+                'email' => $email,
                 'name' => $name
         ]);
         if (!$result)

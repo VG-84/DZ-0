@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db@localhost" uuid="d6435f92-cb06-4ee0-85d1-3d67b9e1f83a">
+    <data-source source="LOCAL" name="db@localhost [3]" uuid="de8b3950-5ff3-479d-9c6c-d36b0df7df1e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:8889/db</jdbc-url>
-      <driver-properties>
-        <property name="serverTimezone" value="UTC" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="db_posts@localhost" uuid="68b547fe-00ba-4a46-9fa1-f579993b9bd6">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:8889/db_posts</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="db@localhost [2]" uuid="40d5cbb4-4995-4b11-bc67-a5babecf5317">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:8889/db</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/db</jdbc-url>
       <driver-properties>
         <property name="serverTimezone" value="UTC" />
       </driver-properties>

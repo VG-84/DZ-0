@@ -1,7 +1,7 @@
 <?php
-const dbHost = 'localhost';
-const dbName = 'db';
-const dbUser = 'root';
-const dbPassword = 'root';
+const DB_HOST = 'localhost';
+const DB_NAME = 'db';
+const DB_USER = 'root';
+const DB_PASSWORD = 'root';
 
 
