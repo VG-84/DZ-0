@@ -1,0 +1,9 @@
+{
+  "autoload":
+  {
+    "PSR-4":
+    {
+      "App\\": "app/", "Base\\": "Base/"
+    }
+  }
+}
