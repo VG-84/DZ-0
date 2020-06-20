@@ -5,11 +5,6 @@ class Application
 {
     private $route;
 
-    public function __construct(Route $route)
-    {
-        $this->route = $route;
-    }
-
     public function run()
     {
         $view = new View();

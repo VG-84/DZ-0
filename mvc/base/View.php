@@ -5,9 +5,9 @@ class View
 {
     private $templatePath;
     private $data;
-    private $twig;
-    public function __construct()
+    public function __construct($path = '')
     {
+        $this->_templatePath = $path;
     }
     public function setTemplatePath(string $path)
     {
@@ -27,14 +27,5 @@ class View
         include $this->templatePath . '../../app/View/' . $tpl;
         $data = ob_get_clean();
         return $data;
-    }
-    public function renderTwig(string $tpl, $data = [])
-    {
-        if (!$this->twig)
-        {
-            $loader = new \Twig\Loader\FilesystemLoader($this->templatePath);
-            $this->twig = new \Twig\Environment($loader);
-        }
-        return $this->twig->render($tpl, $data);
     }
 }
