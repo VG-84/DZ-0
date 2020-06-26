@@ -1,5 +1,5 @@
 <?php
-include 'composer.phar/vendor/autoload.php';
+include 'mvc/vendor/autoload.php';
 require '../base/config.php';
 
 

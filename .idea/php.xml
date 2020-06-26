@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/mvc/vendor/composer" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/mvc/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/mvc/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/mvc/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/mvc/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/mvc/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/mvc/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/mvc/vendor/symfony/polyfill-intl-idn" />
+    </include_path>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
   <component name="PhpRuntimeConfiguration">
     <extensions>
@@ -83,5 +104,10 @@
       <extension name="zend" enabled="false" />
       <extension name="zmq" enabled="false" />
     </extensions>
+  </component>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/mvc/vendor/autoload.php" />
+    </phpunit_settings>
   </component>
 </project>
