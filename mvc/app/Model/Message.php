@@ -107,7 +107,7 @@ class Message
         return $this->authorId;
     }
 
-    public function getAuthor(): User
+    public function getAuthor(): ?User
     {
         return $this->author;
     }

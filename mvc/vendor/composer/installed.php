@@ -5,9 +5,8 @@
     'version' => 'dev-master',
     'aliases' => 
     array (
-      0 => '9999999-dev',
     ),
-    'reference' => 'faf22b147e28eb568db9c26c96520b5da0aecc84',
+    'reference' => 'ac86aa8e6c8451dc09a326ba7d2b2d4649ea26bb',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,9 +17,8 @@
       'version' => 'dev-master',
       'aliases' => 
       array (
-        0 => '9999999-dev',
       ),
-      'reference' => 'faf22b147e28eb568db9c26c96520b5da0aecc84',
+      'reference' => 'ac86aa8e6c8451dc09a326ba7d2b2d4649ea26bb',
     ),
     'doctrine/lexer' => 
     array (
@@ -56,7 +54,6 @@
       'version' => 'dev-master',
       'aliases' => 
       array (
-        0 => '9999999-dev',
       ),
       'reference' => '21a6071ac30715eb9e38139e659089d3e8f45434',
     ),

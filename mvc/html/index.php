@@ -1,5 +1,5 @@
 <?php
-include 'mvc/vendor/autoload.php';
+include '../vendor/autoload.php';
 require '../base/config.php';
 
 
@@ -12,4 +12,7 @@ $route->add('/', \App\Controller\Login::class);
 
 $app = new \Base\Application($route);
 $app->run();
+
+//echo '<pre>';
+//print_r($capsule->getConnection()->getQueryLog());
 

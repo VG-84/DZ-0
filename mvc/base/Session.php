@@ -1,6 +1,5 @@
 <?php
 namespace Base;
-
 class Session
 {
     public function init()

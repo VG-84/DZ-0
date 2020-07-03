@@ -1,5 +1,6 @@
 <?php
 namespace App\Controller;
+use App\Model\Eloquent\User;
 use App\Model\Message;
 use Base\AbstractController;
 
@@ -19,5 +20,12 @@ class Admin extends AbstractController
         $messageId = (int) $_GET['id'];
         Message::deleteMessage($messageId);
         $this->redirect('/blog');
+    }
+    public function users()
+    {
+        return $this->view->render('admin/users.phtml', [
+            'messages' => $messages,
+            'users' => User::all()
+        ]);
     }
 }

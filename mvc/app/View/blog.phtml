@@ -1,3 +1,7 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    var lastId = <?= (int) $this->last_Id?>;
+</script>
 <style>
     .message { margin: 5px 0 0 5px; border: 1px solid grey; width: 450px; min-height: 100px;}
     .author { margin-left: 10px; }
@@ -8,35 +12,32 @@
 
 Список сообщений: <br>
 <?php
+/** @var $message \App\Model\Eloquent\Message */
+/** @var $user \App\Model\User */
 $user = $this->user;
+/** @var Illuminate\Database\Eloquent\Collection $messages */
+$messages = $this->messages;
 ?>
-<?php if($messages = $this->messages): ?>
-    <?php foreach ($messages as $message): ?>
-        <div class="message">
-            <? if($user->isAdmin()): ?>
-                <div class="admin">
-                    <a href="/admin/deleteMessage/?id=<?=$message->getId();?>">delete</a>
-                </div>
-            <? endif; ?>
-            <span class="date"><?=$message->getCreatedAt();?> </span>
-            <? if($author = $message->getAuthor()):?>
-                <span class="author"><?=htmlspecialchars($author->getName());?></span>
-            <? else: ?>
-                <span class="author">Сообщение от удаленного пользователя</span>
-            <? endif; ?>
-            <div class="text"><?=htmlspecialchars(nl2br($message->getText()));?></div>
-            <? if($message->getImage()):?>
-                <div><img src="/images/<?=$message->getImage();?>" style="width: 150px;"></div>
-            <? endif;?>
-        </div>
-    <?php endforeach; ?>
-<?php else: ?>
-    Сообщений пока нет
-<?php endif; ?>
-
+Вы вошли как <?= $user->getName(); ?> # <?= $user->getId();?>
+<div id="messages">
+    <?php include 'messageList.phtml';?>
+</div>
+<br>
+<input type="button" onclick="loadMessages(lastId);" value="еще" style="width: 400px;"><br>
 Добавить сообщение
 <form enctype="multipart/form-data" action="/blog/addMessage" method="post">
     <textarea style="width: 250px; height: 150px;" type="text" value="" name="text"></textarea><br><br>
     Изображение: <input type="file" name="image"><br>
     <input type="submit" value="Отправить">
 </form>
+<script>
+    var lastId = <?=$this->last_Id?>;
+  function loadMessages(lastId)
+  {
+      $.get('/blog/loadlist/?last_id=' + lastId, {}, function (r) {
+          var html = $('#messages').html();
+          var newHtml = html + r;
+          $('#messages').html(newHtml);
+      })
+  }
+</script>

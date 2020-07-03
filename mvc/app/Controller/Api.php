@@ -26,8 +26,8 @@ class Api extends AbstractController
 }
 
     public function response(array $data)
-{
+    {
     header('Content-type: application/json');
     return json_encode($data);
-}
+    }
 }
